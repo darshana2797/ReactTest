@@ -30,7 +30,6 @@ const initialState={
   ],
   selectedCardTitle: null, 
   sideNavItem: 'Settings',
-  appHistory: null
 };
 
 export default (state=initialState,action) => {

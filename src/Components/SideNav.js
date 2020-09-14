@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { selectedSidenavItem, selectedCardTitle } from '../Redux/actions/userActions'
+import { selectedSidenavItem } from '../Redux/actions/userActions'
 import styles from './styles'
 import { FaComment, FaChartPie, FaLaptop, FaShoppingBag, FaUsers } from 'react-icons/fa';
 import { MdSettings, MdClose, MdNotifications } from 'react-icons/md'
@@ -14,7 +14,6 @@ class SideNav extends Component {
 
     handleClick = (item) => {
       this.props.selectedSidenavItem(item)
-      this.props.details.sideNavItem !== "Settings" ? this.props.selectedCardTitle(null) : null
     }
 
     render() {

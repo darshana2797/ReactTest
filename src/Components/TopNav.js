@@ -12,6 +12,7 @@ class TopNav extends Component {
 
     render() {
       var title = '' + this.props.details.sideNavItem + (this.props.details.selectedCardTitle !== null &&  this.props.details.sideNavItem === "Settings" ? ' > '+this.props.details.selectedCardTitle : '')
+      
       return (
         <div className="container-fluid row" style={{width:'100%', height: '60px', flexDirection: 'row', justifyContent: 'space-between', display: 'flex', alignItems: 'center'}}>
           <div id="title" style={styles.title}>{title}</div>

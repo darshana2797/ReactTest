@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          {/* <Route exact path="/products/:id" component={Products}/> */}
           <Route exact path="/" component={Dashboard}/>
           <Route exact path="/listing" component={Listing}/>
         </div>

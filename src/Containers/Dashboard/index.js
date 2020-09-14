@@ -10,9 +10,7 @@ import TopNav from '../../Components/TopNav';
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.state={
-          selectedSection: 'Settings'
-        }
+        this.state={}
     }
 
     componentDidMount() {
@@ -90,12 +88,11 @@ class Dashboard extends Component {
 
 export function mapDispatchToProps(dispatch) {
 	return {
-        getDashboardData: () => dispatch(getDashboardData()),
-        selectedCardTitle: (selectedCard) => {
-          dispatch(selectedCardTitle(selectedCard))
-          
-        }
+    getDashboardData: () => dispatch(getDashboardData()),
+    selectedCardTitle: (selectedCard) => {
+      dispatch(selectedCardTitle(selectedCard))
     }
+  }
 }
 
 export function mapStateToProps(state){

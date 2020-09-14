@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {getDashboardData, selectedCardTitle} from '../../Redux/actions/userActions'
+import {getListingData, selectedCardTitle} from '../../Redux/actions/userActions'
 import styles from './styles'
-import { Button, Alert} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { FaFileImport, FaFileExport, FaPencilAlt, FaMinusCircle, FaCopy } from 'react-icons/fa';
 
 import SideNav from '../../Components/SideNav';
@@ -21,7 +21,7 @@ class Listing extends Component {
     }
 
     componentDidMount() {
-      this.props.getDashboardData()
+      this.props.getListingData()
     }
 
     handleClick = (item, id) => {
@@ -109,8 +109,8 @@ class Listing extends Component {
 
 export function mapDispatchToProps(dispatch) {
 	return {
-        getDashboardData: () => dispatch(getDashboardData()),
-        selectedCardTitle: (selectedCard) => dispatch(selectedCardTitle(selectedCard))
+      getListingData: () => dispatch(getListingData()),
+      selectedCardTitle: (selectedCard) => dispatch(selectedCardTitle(selectedCard))
     }
 }
 
