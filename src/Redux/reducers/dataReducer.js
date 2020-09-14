@@ -34,14 +34,17 @@ const initialState={
 
 export default (state=initialState,action) => {
   switch(action.type) {
+
     case FETCH_DASHBOARD_DATA:
-      return state;
     case FETCH_LISTING_DATA:
       return state
+
     case SELECTED_CARD_TITLE:
       return {...state,selectedCardTitle:action.payload}
+
     case SELECTED_SIDENAV_ITEM:
       return {...state,sideNavItem:action.payload}
+      
     default:
       return state
   }
